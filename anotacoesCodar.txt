@@ -1,0 +1,33 @@
+// Anotações sobre o node.js
+
+npm: Gerenciador de pacotes do note
+P: Pasta
+
+// Configurar a pasta public // P: serve.js
+Configurando a pasta public no servidor, ela consiguira ler os nosso arquivos " CSS " " Scripts " " Imagens ". Use esse codigo " server.use(express.static("public")) " , junto como as const a cima.
+
+
+// COMANDOS
+
+npm init -y  / Iniciar um novo projeto, vai gerar um arquivo chamado " package.json "
+
+// Criando um servidor no Node.js
+
+express: É um blibioteca de coleção de ideias e estrategias é será colocada no projeto
+
+npm install express  
+/  Esse comando cri a pasta " node_modules " e o arquivo " package-lock.json " // package-lock.json  // é feito para mapear todas as dependencias da nossa aplicação.
+
+node src/sever.js  
+/ Esse comando faz o servidor ser ligando (abrindo porta)
+
+npm install nodemon -D
+// Essse comando serve para instalar uma dependencia que vai monitoras todas alterações no meu codigo, autalizar o servidor, para eu não precisar fazer manualmente
+- D  // significa que está desenvolvendo.
+ Obs: quando for subir em uma sevidor de hospedagem esse -D povavelmento não existirá , porém não sei como fazer isso ainda.
+// Após rodar o camando " npm install nodemon " tem que configurar o arquivo " package.json " para ele fazer isso por você , no campo de " scripts " deve se tira o " test " e colocar " dev " e na frente " nodemon src/server.js " , quando quiser liga o servidor irá usar " npm run dev " e ele faz o resto. Para restart do servidor é do escrever " rs "
+
+
+
+
+
