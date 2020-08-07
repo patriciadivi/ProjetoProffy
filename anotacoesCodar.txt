@@ -2,6 +2,7 @@
 
 npm: Gerenciador de pacotes do note
 P: Pasta
+" ":  As aspas entre os codigos ou comandos não dever ser copiados 
 
 // Configurar a pasta public // P: serve.js
 Configurando a pasta public no servidor, ela consiguira ler os nosso arquivos " CSS " " Scripts " " Imagens ". Use esse codigo " server.use(express.static("public")) " , junto como as const a cima.
@@ -26,6 +27,28 @@ npm install nodemon -D
 - D  // significa que está desenvolvendo.
  Obs: quando for subir em uma sevidor de hospedagem esse -D povavelmento não existirá , porém não sei como fazer isso ainda.
 // Após rodar o camando " npm install nodemon " tem que configurar o arquivo " package.json " para ele fazer isso por você , no campo de " scripts " deve se tira o " test " e colocar " dev " e na frente " nodemon src/server.js " , quando quiser liga o servidor irá usar " npm run dev " e ele faz o resto. Para restart do servidor é do escrever " rs "
+
+// Tamplete Engine 
+- É uma maneira de dar um motor ao html, para que suas páginas html fiquem dinâmicas
+- Instala o motor (Tamplete Engine) nome da ferramenta " nunjucks "
+
+npm install nunjucks 
+
+// Configurar o nunjucks // server.js //codigo
+- Primeiro add uma conts " const nunjucks = require('nunjucks') ", depois 
+"  nunjucks.configure('src/views', {
+    express: server,
+    noCache: true,
+    
+}) "
+//sever.js
+- Após isso as rotas são alteradas, ficando assim " return res.render("index.html") "
+
+
+
+
+
+
 
 
 
