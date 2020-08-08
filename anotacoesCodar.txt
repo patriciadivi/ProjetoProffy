@@ -45,6 +45,10 @@ npm install nunjucks
 - Após isso as rotas são alteradas, ficando assim " return res.render("index.html") "
 
 
+// Iniciando como o Banco de Dados //pasta database - db.js
+// Instalando o Banco de Dados (SQLite)
+
+npm install sqlite-async
 
 
 
