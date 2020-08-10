@@ -41,57 +41,42 @@
             </header>
 
             <main>
-                <form action="" id="create-class">
+                <form action="/save-classes" id="create-class" method="POST">
                     <fieldset>
                         <legend>Seus dados</legend>
 
                         <div class="input-block">
-                            <label for="name">
-                                Nome Completo
-                            </label>
-                            <input name="name" id="name" required="required">
-
+                            <label for="name">Nome Completo</label>
+                            <input name="name" id="name" required>
                         </div>
 
                         <div class="input-block">
-                            <label for="avatar">
-                                Link da sua foto
-                                <small>(comece com https://)</small>
+                            <label for="avatar">Link da sua foto<small>(comece com https://)</small>
                             </label>
-                            <input name="avatar" id="avatar" type="url" required="required">
-
+                            <input name="avatar" id="avatar" type="url" required>
                         </div>
 
                         <div class="input-block">
-                            <label for="whatsapp">
-                                Whatsapp
-                                <small>(somente números)</small>
+                            <label for="whatsapp">Whatsapp<small>(somente números)</small>
                             </label>
-                            <input name="whatsapp" id="whatsapp" type="number" required="required">
-
+                            <input name="whatsapp" id="whatsapp" type="number" required>
                         </div>
 
                         <div class="textarea-block">
                             <label for="bio">Biografia</label>
-                            <textarea name="bio" id="bio" required="required"></textarea>
-
+                            <textarea name="bio" id="bio" required></textarea>
                         </div>
 
                     </fieldset>
 
                     <fieldset>
                         <legend>Sobre a aula</legend>
-
                         <div class="select-block">
-                            <label for="subject">
-                                Máteria</label>
-                            <select name="subject" id="subject" required="required">
-
+                            <label for="subject">Máteria</label>
+                            <select name="subject" id="subject" required>
                                 <option value="">Selecione uma opção</option>
                                 {% for subject in subjects %}
-                                    
-                                    <option value="{{loop.index}}">{{ subject }}</option>
-
+                                    <option value="{{loop.index}}">{{subject}}</option>
                                 {% endfor %}
                             </select>
 
@@ -102,7 +87,7 @@
                                 Custo da sua hora/aula
                                 <small>(R$)</small>
                             </label>
-                            <input  name="cost" type="cost" type="number" id="cost" required>
+                            <input  name="cost" type="cost" id="cost" type="number" required>
 
                         </div>
 
@@ -117,17 +102,16 @@
 
                             <div class="select-block">
                                 <label for="weekday">Dia da semana</label>
-                                <select name="weeday[]" required>
+                                <select name="weekday[]" required>
                                     <option value="">Selecione uma opção</option>
-
                                     {% for weekday in weekdays %}
-                                    
-                                        <option value="{{loop.index0}}">{{ weekday }}</option>
-
+                                        <option value="{{loop.index0}}">{{weekday}}
+                                        </option>
                                     {% endfor %}
                                 </select> <!-- Os  " [] " no weeday[] pode receber mais dados juntos no banco de dados-->
 
                             </div>
+
 
                             <div class="input-block">
                                 <label for="time-from">Das</label>
@@ -142,7 +126,6 @@
                             </div>
 
                         </div>
-
 
                     </fieldset>
 
